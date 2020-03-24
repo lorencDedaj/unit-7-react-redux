@@ -110,7 +110,7 @@ The application should have the following hierarchical structure:
 
 Your app should look something like this... 
 
-![MegaMarketApp](https://github.com/CodesmithLLC/unit-7-react-redux/blob/master/MegaMarketApp.png)
+![MegaMarketApp](<img src="./docs/assets/images.MegaMarketApp.png"></img>)
 
 And it should have the following functionality: 
 
