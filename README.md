@@ -110,7 +110,7 @@ The application should have the following hierarchical structure:
 
 Your app should look something like this... 
 
-![MegaMarketApp](<img src="./docs/assets/images/MegaMarketApp.png"></img>)
+![MegaMarketApp](./docs/assets/images/MegaMarketApp.png)
 
 And it should have the following functionality: 
 
