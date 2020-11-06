@@ -35,7 +35,7 @@ class MainContainer extends Component {
           { /* Start adding components here... */ }
         </div>
       </div>
-    )
+    );
   }
 
 }
