@@ -10,7 +10,7 @@
  */
 
 import React, { Component } from 'react';
-import Wrapper from './containers/MainContainer.jsx';
+import MainContainer from './containers/MainContainer.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Wrapper/>
+        <MainContainer/>
       </div>
     );
   }
