@@ -100,7 +100,7 @@ The application should have the following hierarchical structure:
 
 ````   
 |-- App
-  |-- WrapperContainer
+  |-- MainContainer
       |-- TotalsDisplay
       |-- MarketsContainer
           |-- MarketCreator
