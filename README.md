@@ -5,16 +5,16 @@ React and Redux
 ![redux-logo](https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67)
 
 [Redux](http://redux.js.org/) is a predictable state container to help manage application state. 
-It modifies the [Flux architecture](https://facebook.github.io/flux/docs/overview.html) introduced by Facebook to further enforce unidirectional data flow. 
-Although Redux can be used without React, it is often used in conjuction with [React-Redux](https://github.com/reactjs/react-redux) to build scalable web applications.
+It modifies the [Flux architecture](https://facebook.github.io/flux/) introduced by Facebook to further enforce unidirectional data flow. 
+Although Redux can be used without React, it is often used in conjunction with [React-Redux](https://github.com/reactjs/react-redux) to build scalable web applications.
 
-Redux itself is a relatively lightwight library (it adds 2kB to your application), with a few new APIs to learn.
+Redux itself is a relatively lightweight library (it adds 2kB to your application), with a few new APIs to learn.
 Its power lies behind how it used to to make your code easy to reason about, run consistently, and simple to test.
 This is done through Redux's three fundamental principles:
 
-* A **single source of truth** contained in a store.
-* **State is read-only**. The only way to change state is though emitting an action.
-* **Changes are made with pure functions** in the form of reducers.
+* A __single source of truth__ contained in a store.
+* __State is read-only__. The only way to change state is though emitting an action.
+* __Changes are made with pure functions__ in the form of reducers.
 
 ### Store
 
@@ -30,9 +30,9 @@ Actions describe events that have taken place in an application and an intent to
 
 Actions are structured as objects with key-value pairs. The only required key is "type". The type property has a string value that describes the event in plain English. Since these actions will be used throughout the app, each action type should be unique.
 
-As an example, if someone added a name to a (hypothetical) list, we would want to emit an action describing that event and pass along the added name:
+As an example, if someone added a name to a (hypothetical) list, we would want to emit/dispatch an action describing that event and pass along the added name:
 
-```
+``` js
 // Action object for adding a name to a list
 { type: 'NAME_ADDED', name: 'Erlich Bachman' }
 ```
@@ -40,7 +40,7 @@ Creating these action objects throughout an application can get tedious and dece
 
 Action creators are functions that return action objects. Instead of writing an action as an object literal, we can instead create a function that will return the action object.
 
-```
+``` js
 // Add name action creator
 function addName(name) {
   return {
@@ -51,17 +51,17 @@ function addName(name) {
 ```
 Now we need a way to let our store know that this action has occurred. Redux includes a "dispatch" method that broadcasts actions to the store. Dispatch takes in an action object and emits that action to the application.
 
-Notice that actions and action creators have no physical effect on state. The dispatched action only **describes** an intent to change state.
+Notice that actions and action creators have no physical effect on state. The dispatched action only __describes__ an intent to change state.
 
 ### Reducers
 
-Reducers are the mechanism for updating state. They are pure functions that essentially wait for dispatched actions and update state accordingly. **Reducers must always return state** - even if state was unmodified.
+Reducers are the mechanism for updating state. They are pure functions that essentially wait for dispatched actions and update state accordingly. __Reducers must always return state__ - even if state was unmodified.
 
-Reducers take two parameters: the previous state and the dispatched action. These parameters should **never be mutated**. So state should essentially be copied, updated (if necessary) and then returned. Libraries like [immutable.js](https://facebook.github.io/immutable-js/) are often used alongside Redux so that objects are not mutated inadvertently.
+Reducers take two parameters: the previous state and the dispatched action. These parameters should __never be mutated__. So state should essentially be copied, updated (if necessary) and then returned. Libraries like [immutable.js](https://facebook.github.io/immutable-js/) are often used alongside Redux so that objects are not mutated inadvertently.
 
-When an action is dispatched, it is passed to every reducer. If that action is something the reducer is interested in, it can perform some logic and return the updated state. Continuing our 'name added' example, once the name added action has been dispatched, the reducer function would take in the app state and name added action as parameters. Then it would update state (adding the name to a list of names) based on the action being passed in.
+When an action is dispatched, it is passed to __every__ reducer. If that action is something the reducer is interested in, it can perform some logic and return the updated state. Continuing our 'name added' example, once the name added action has been dispatched, the reducer function would take in the app's state and name added action as parameters. Then it would update state (adding the name to a list of names) based on the action being passed in.
 
-```
+``` js
 function listReducer(state, action) {
   switch(action.type) {
     case 'NAME_ADDED':
@@ -74,7 +74,7 @@ function listReducer(state, action) {
 
 Each reducer is called once when the store is being created. Therefore, reducers are where you set the app's initial state.
 
-Given that reducers are pure functions, there are 3 things reducers **never** do:
+Given that reducers are pure functions, there are 3 things reducers __never__ do:
 
 1. Mutate its arguments
 2. Perform side effects (like API calls)
@@ -105,7 +105,7 @@ The application should have the following hierarchical structure:
       |-- MarketsContainer
           |-- MarketCreator
           |—- MarketsDisplay
-              |—- MarketDisplay      
+              |—- Market
 ````
 
 Your app should look something like this... 
@@ -114,11 +114,11 @@ Your app should look something like this...
 
 And it should have the following functionality: 
 
-1. If you enter a location name and click 'Add Market', you should see a new MarketDisplay card and the Total Markets value should increment by one.  Add at least six of these.
+1. If you enter a location name and click 'Add Market', you should see a new Market card and the Total Markets value should increment by one.  Add at least six of these.
 
-2. If you click on Add Card on a given MarketDisplay card, you should see the Cards and % of total update.  You should also see Total Cards increment by one.
+2. If you click on _"Add Card"_ on a given Market card, you should see the Cards and % of total update.  You should also see Total Cards increment by one.
 
-3. If you click on Delete Card on a given MarketDisplay card, you should see the Cards and % of total update.  You should also see Total Cards decrement by one.
+3. If you click on _"Delete"_ Card on a given Market card, you should see the Cards and % of total update.  You should also see _"Total Cards"_ decrement by one.
 
 4. Inspect your page and go to the Redux tab.  Watch the state updates in the Devtools as you add and remove cards.
 
