@@ -4,7 +4,7 @@
  * @module  MarketsContainer
  * @author
  * @date
- * @description stateful component that renders MarketCreator and MarketDisplay
+ * @description stateful component that renders MarketCreator and MarketsDisplay
  *
  * ************************************
  */
