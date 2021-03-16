@@ -114,7 +114,7 @@ Your app should look something like this...
 
 And it should have the following functionality: 
 
-1. If you enter a location name and click 'Add Market', you should see a new Market card and the Total Markets value should increment by one.  Add at least six of these.
+1. If you enter a location name and click _"Add Market"_, you should see a new Market card and the Total Markets value should increment by one.  Add at least six of these.
 
 2. If you click on _"Add Card"_ on a given Market card, you should see the Cards and % of total update.  You should also see Total Cards increment by one.
 
