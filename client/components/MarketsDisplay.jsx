@@ -4,16 +4,16 @@
  * @module  MarketsDisplay
  * @author
  * @date
- * @description presentation component that renders n MarketDisplay components
+ * @description presentation component that renders n Market components
  *
  * ************************************
  */
 
 import React from 'react';
-import MarketDisplay from './MarketDisplay.jsx';
+import Market from './Market.jsx';
 
 
-const MarketsDisplay = (props) => {
+const MarketsDisplay = props => {
 
   return(
     <div className="displayBox">

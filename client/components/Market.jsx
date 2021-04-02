@@ -1,7 +1,7 @@
 /**
  * ************************************
  *
- * @module  MarketDisplay
+ * @module  Market
  * @author
  * @date
  * @description presentation component that renders a single box for each market
@@ -11,10 +11,10 @@
 
 import React from 'react';
 
-const MarketDisplay = (props) => (
+const Market = props => (
   <div className="marketBox">
 
   </div>
 );
 
-export default MarketDisplay;
+export default Market;

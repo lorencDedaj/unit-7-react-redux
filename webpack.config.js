@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 
 const entry = [
@@ -12,19 +12,20 @@ const output = {
 };
 
 module.exports = {
-  entry, output,
+  mode: 'development',
+  entry,
+  output,
   devtool: "eval-source-map",
   module: {
-    loaders: [
+    rules:[
       {
         test: /.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets:[ 'es2015', 'react', 'stage-2' ]
+        use:{
+          loader: 'babel-loader',
         }
-      },
-    ],
+      }
+    ]
   },
 };    
           

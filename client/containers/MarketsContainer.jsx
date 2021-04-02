@@ -4,7 +4,7 @@
  * @module  MarketsContainer
  * @author
  * @date
- * @description stateful component that renders MarketCreator and MarketDisplay
+ * @description stateful component that renders MarketCreator and MarketsDisplay
  *
  * ************************************
  */
@@ -15,11 +15,11 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 // import child components...
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   // provide pertinent state here
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   // create functions that will dispatch action creators
 });
 
