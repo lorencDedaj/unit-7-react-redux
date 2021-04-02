@@ -13,7 +13,7 @@ import React from 'react';
 import Market from './Market.jsx';
 
 
-const MarketsDisplay = (props) => {
+const MarketsDisplay = props => {
 
   return(
     <div className="displayBox">

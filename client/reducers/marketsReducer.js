@@ -23,7 +23,7 @@ const marketsReducer = (state = initialState, action) => {
   let marketList;
 
   switch (action.type) {
-    case types.ADD_MARKET: {
+    case types.ADD_MARKET:
       // increment lastMarketId and totalMarkets counters
 
       // create the new market object from provided data
@@ -43,7 +43,6 @@ const marketsReducer = (state = initialState, action) => {
         totalMarkets,
         newLocation: '',
       };
-    }
     case types.SET_NEW_LOCATION: 
     
     case types.ADD_CARD:

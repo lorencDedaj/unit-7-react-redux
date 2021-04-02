@@ -18,10 +18,6 @@ const mapStateToProps = state => ({
   // add pertinent state here
 });
 
-const mapDispatchToProps = dispatch => ({
-
-});
-
 class MainContainer extends Component {
   constructor(props) {
     super(props);
@@ -40,4 +36,4 @@ class MainContainer extends Component {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
+export default connect(mapStateToProps, null)(MainContainer);

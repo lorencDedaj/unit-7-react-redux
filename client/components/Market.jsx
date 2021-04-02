@@ -11,7 +11,7 @@
 
 import React from 'react';
 
-const Market = (props) => (
+const Market = props => (
   <div className="marketBox">
 
   </div>
