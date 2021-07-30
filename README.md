@@ -90,7 +90,8 @@ For more information on reducers, refer to the Redux docs:
 
 - [ ] Go to the Chrome Web Store and download/install Redux DevTools
 - [ ] Run `npm install` to install all the dependencies. 
-- [ ] Run `npm start` to start your Webpack Development Server, and navigate to `http://localhost:8080`. 
+- [ ] Run `npm start` to start your Webpack Development Server, and navigate to `http://localhost:8080`.
+- [ ] Whoa, you find that the page is blank! Use those debugging skills to figure out why and how to first get **MegaMarket Loyalty Cards** rendering on your screen. From there, work your way through the files to get more components rendered. 
 
 ### Challenges
 
@@ -108,7 +109,7 @@ The application should have the following hierarchical structure:
               |—- Market
 ````
 
-Your app should look something like this... 
+The end goal is to get your app looking something like this... 
 
 ![MegaMarketApp](./docs/assets/images/MegaMarketApp.png)
 
