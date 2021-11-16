@@ -1,5 +1,5 @@
-// const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const entry = [
   './client/index.js'
@@ -27,5 +27,17 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    static: {
+      publicPath: '/',
+      directory: path.resolve(__dirname)
+    }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+     title: 'Development',
+     template: 'index.html'
+    }),
+  ],
 };    
           
