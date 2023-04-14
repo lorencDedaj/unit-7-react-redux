@@ -9,31 +9,21 @@
  * ************************************
  */
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 // import from child components...
 
-
-const mapStateToProps = state => ({
+const MainContainer = () => {
   // add pertinent state here
-});
 
-class MainContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className="container">
-        <div className="outerBox">
-          <h1 id="header">MegaMarket Loyalty Cards</h1>
-          { /* Start adding components here... */ }
-        </div>
+  return(
+    <div className="container">
+      <div className="outerBox">
+        <h1 id="header">MegaMarket Loyalty Cards</h1>
+        { /* Start adding components here... */ }
       </div>
-    );
-  }
-
+    </div>
+  );
 }
 
-export default connect(mapStateToProps, null)(MainContainer);
+export default MainContainer;
