@@ -125,9 +125,14 @@ And it should have the following functionality:
 
 ### Extensions
 
-1. Use Immutable.js to ensure that state never gets mutated.
+1. Create a new branch called `toolkit`. In this new branch, refactor your MegaMarkets application to make use of Redux Toolkit: https://redux-toolkit.js.org/
+  - When finished, you and your partner should compare the two versions and discuss what steps Redux Toolkit has automated or made simpler. What are its advantages for setting up a React/Redux application?
 
-2. Store market and loyalty card data in a database of your choice and fetch them onload.
+2. Create another new branch off `main`. Refactor your `MainContainer` and `MarketsContainer` components to use the Connect API (https://react-redux.js.org/api/connect) instead of Redux Hooks.
 
-3. Refactor your Node-React calendar to use React-Redux
+3. Use Immutable.js to ensure that state never gets mutated.
+
+4. Store market and loyalty card data in a database of your choice and fetch them onload.
+
+5. Refactor your Node-React calendar to use React-Redux
 
