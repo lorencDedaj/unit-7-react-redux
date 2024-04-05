@@ -16,12 +16,12 @@ import reducers from './reducers/index';
 
 // rtk dependencies
 import { configureStore } from '@reduxjs/toolkit';
-import markets from './reducers/marketsReducer';
+import marketsReducer from './reducers/marketsReducer';
 
 // modern redux toolkit `configureStore()` -- https://redux-toolkit.js.org/api/configureStore
 const store = configureStore({
   reducer: {
-    markets,
+    markets: marketsReducer,
     // if we had other reducers, they would go here
   },
 });
