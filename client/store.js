@@ -9,12 +9,6 @@
  * ************************************
  */
 
-// legacy redux dependencies
-import { createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import reducers from './reducers/index';
-
-// rtk dependencies
 import { configureStore } from '@reduxjs/toolkit';
 import marketsReducer from './reducers/marketsReducer';
 
@@ -25,9 +19,5 @@ const store = configureStore({
     // if we had other reducers, they would go here
   },
 });
-
-// legacy redux: `createStore()` -- https://redux.js.org/api/createstore
-// we are adding composeWithDevTools here to get easy access to the Redux dev tools
-// const store = createStore(reducers, composeWithDevTools());
 
 export default store;
