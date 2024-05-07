@@ -2,7 +2,7 @@
 React and Redux
 
 ## Redux
-![redux-logo](https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67)
+![redux-logo](./docs/assets/images/redux-logo.png)
 
 [Redux](http://redux.js.org/) is a predictable state container to help manage application state. 
 It modifies the [Flux architecture](https://facebook.github.io/flux/) introduced by Facebook to further enforce unidirectional data flow. 
