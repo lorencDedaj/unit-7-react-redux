@@ -9,15 +9,14 @@
  * ************************************
  */
 
-import React from 'react';
-import Market from './Market.jsx';
+import React from "react";
+import Market from "./Market.jsx";
 
-
-const MarketsDisplay = props => {
-
-  return(
-    <div className="displayBox">
+const MarketsDisplay = (props) => {
+  return (
+    <div className='displayBox'>
       <h4>Markets</h4>
+      <Market />
     </div>
   );
 };

@@ -9,14 +9,14 @@
  * ************************************
  */
 
-import * as types from '../constants/actionTypes';
+import * as types from "../constants/actionTypes";
 
 const initialState = {
   totalMarkets: 0,
   totalCards: 0,
   marketList: [],
   lastMarketId: 10000,
-  newLocation: '',
+  newLocation: "",
 };
 
 const marketsReducer = (state = initialState, action) => {
@@ -41,13 +41,13 @@ const marketsReducer = (state = initialState, action) => {
         marketList,
         lastMarketId,
         totalMarkets,
-        newLocation: '',
+        newLocation: "",
       };
-    case types.SET_NEW_LOCATION: 
-    
+    case types.SET_NEW_LOCATION:
+
     case types.ADD_CARD:
 
-    case types.DELETE_CARD: 
+    case types.DELETE_CARD:
 
     default: {
       return state;

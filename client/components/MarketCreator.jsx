@@ -9,9 +9,10 @@
  * ************************************
  */
 
-import React from 'react';
+import React from "react";
 
-const MarketCreator = props => (
+const MarketCreator = (props) => (
+  <div>{/* JSX goes here */}</div>
   // how do we create the circuit between the store and an input field?
   // how do we update the store from a presentation component?
 );
