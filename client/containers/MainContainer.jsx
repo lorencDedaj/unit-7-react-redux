@@ -16,7 +16,8 @@ import TotalsDisplay from "../components/TotalsDisplay.jsx";
 // import MarketsDisplay from "../components/MarketsDisplay.jsx";
 import MarketsContainer from "../containers/MarketsContainer.jsx";
 
-const MainContainer = () => {
+const MainContainer = (props) => {
+  // console.log()
   // add pertinent state here
 
   return (

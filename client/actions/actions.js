@@ -10,11 +10,15 @@
  */
 
 // import actionType constants
-import * as types from '../constants/actionTypes';
+import * as types from "../constants/actionTypes";
 
-export const addCardActionCreator = marketId => ({
+export const addCardActionCreator = (marketId) => ({
   type: types.ADD_CARD,
   payload: marketId,
 });
 
+export const addMarketActionCreator = (location) => ({
+  type: types.ADD_MARKET,
+  payload: location,
+});
 // add more action creators

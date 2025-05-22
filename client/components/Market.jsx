@@ -9,12 +9,8 @@
  * ************************************
  */
 
-import React from 'react';
+import React from "react";
 
-const Market = props => (
-  <div className="marketBox">
-
-  </div>
-);
+const Market = (props) => <div className='marketBox'></div>;
 
 export default Market;
