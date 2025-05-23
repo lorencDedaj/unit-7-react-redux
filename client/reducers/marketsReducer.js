@@ -28,13 +28,14 @@ const marketsReducer = (state = initialState, action) => {
       const newMarketID = state.lastMarketId + 1;
       // const lastMarketId = state.lastMarketId += 1;
       // state.totalMarkets += 1;
+      const newTotalCards = state.totalCards + 1;
       const newTotalMarkets = state.totalMarkets + 1;
       // create the new market object from provided data
       const newMarket = {
         // what goes in here?
         marketId: newMarketID,
         location: action.payload,
-
+        cards: newTotalCards,
       };
 
       // push the new market onto a copy of the market list
@@ -43,6 +44,7 @@ const marketsReducer = (state = initialState, action) => {
       marketList.push(newMarket);
       console.log('Market list:', marketList)
       console.log('New Market:', newMarket)
+      console.log('cards: ', newMarket.cards)
 
       // return updated state
       return {
@@ -51,12 +53,13 @@ const marketsReducer = (state = initialState, action) => {
         lastMarketId: newMarketID,
         totalMarkets: newTotalMarkets,
         newLocation: '',
+        totalCards: newTotalCards,
       };
     }
     case types.SET_NEW_LOCATION: 
     
     case types.ADD_CARD:
-
+      
     case types.DELETE_CARD: 
 
     default: {

@@ -16,6 +16,7 @@ import * as actions from "../actions/actions.js";
 // import child components...
 import MarketCreator from "../components/MarketCreator.jsx";
 import MarketsDisplay from "../components/MarketsDisplay.jsx";
+import TotalsDisplay from "../components/TotalsDisplay.jsx";
 
 // import actions from "../actions/actions.js";
 
@@ -26,7 +27,10 @@ const MarketsContainer = () => {
   // returns a function that can dispatch actio`n creators
   const dispatch = useDispatch();
 
+  const totalCards = useSelector((state) => state.markets.cards)
+
   const handleMarket = (location) => {
+
     console.log("hi");
     dispatch(actions.addMarketActionCreator(location));
   };
@@ -35,6 +39,7 @@ const MarketsContainer = () => {
   return (
     <div className='innerbox'>
       <MarketCreator handleMarket={handleMarket} />
+      <TotalsDisplay totalCards={totalCards} />
       <MarketsDisplay />
     </div>
   );
