@@ -22,11 +22,12 @@ const MarketCreator = (props) => (
       action=''
       onSubmit={(e) => {
         e.preventDefault();
+        const location = e.target.elements['location'].value;
         // console.log(e);
         props.handleMarket(location);
       }}
     >
-      <label htmlFor='text'>Location</label>
+      <label htmlFor='input-location'>Location</label>
       <input type='text' id='input-location' name='location' />
       <input type='submit' value='Add Market' />
     </form>
