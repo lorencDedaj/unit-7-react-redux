@@ -21,4 +21,5 @@ export const addMarketActionCreator = (location) => ({
   type: types.ADD_MARKET,
   payload: location,
 });
+
 // add more action creators

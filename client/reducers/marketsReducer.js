@@ -9,14 +9,14 @@
  * ************************************
  */
 
-import * as types from '../constants/actionTypes';
+import * as types from "../constants/actionTypes";
 
 const initialState = {
   totalMarkets: 0,
   totalCards: 0,
   marketList: [],
   lastMarketId: 10000,
-  newLocation: '',
+  newLocation: "",
 };
 
 const marketsReducer = (state = initialState, action) => {
@@ -26,10 +26,10 @@ const marketsReducer = (state = initialState, action) => {
     case types.ADD_MARKET: {
       // increment lastMarketId and totalMarkets counters
       const newMarketID = state.lastMarketId + 1;
-      // const lastMarketId = state.lastMarketId += 1;
-      // state.totalMarkets += 1;
       const newTotalCards = state.totalCards + 1;
       const newTotalMarkets = state.totalMarkets + 1;
+      // const lastMarketId = state.lastMarketId += 1;
+      // state.totalMarkets += 1;
       // create the new market object from provided data
       const newMarket = {
         // what goes in here?
@@ -42,9 +42,9 @@ const marketsReducer = (state = initialState, action) => {
       //creating shallow copy and pushing newMarket
       marketList = state.marketList.slice();
       marketList.push(newMarket);
-      console.log('Market list:', marketList)
-      console.log('New Market:', newMarket)
-      console.log('cards: ', newMarket.cards)
+      // console.log("Market list:", marketList);
+      // console.log("New Market:", newMarket);
+      // console.log("cards: ", newMarket.cards);
 
       // return updated state
       return {
@@ -52,15 +52,15 @@ const marketsReducer = (state = initialState, action) => {
         marketList,
         lastMarketId: newMarketID,
         totalMarkets: newTotalMarkets,
-        newLocation: '',
+        newLocation: "",
         totalCards: newTotalCards,
       };
     }
-    case types.SET_NEW_LOCATION: 
-    
+    case types.SET_NEW_LOCATION:
+
     case types.ADD_CARD:
-      
-    case types.DELETE_CARD: 
+
+    case types.DELETE_CARD:
 
     default: {
       return state;

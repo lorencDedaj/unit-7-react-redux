@@ -27,10 +27,13 @@ const MarketsContainer = () => {
   // returns a function that can dispatch actio`n creators
   const dispatch = useDispatch();
 
-  const totalCards = useSelector((state) => state.markets.cards)
+  // const markets = useSelector((state) => state.markets);
+  // console.log(`markets`, markets);
+
+  const totalCards = useSelector((state) => state.markets.totalCards);
+  console.log("totalCards", totalCards);
 
   const handleMarket = (location) => {
-
     console.log("hi");
     dispatch(actions.addMarketActionCreator(location));
   };
@@ -39,7 +42,7 @@ const MarketsContainer = () => {
   return (
     <div className='innerbox'>
       <MarketCreator handleMarket={handleMarket} />
-      <TotalsDisplay totalCards={totalCards} />
+      {/* <TotalsDisplay totalCards={totalCards} /> */}
       <MarketsDisplay />
     </div>
   );

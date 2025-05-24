@@ -18,11 +18,9 @@ const MarketCreator = (props) => (
     <h3>Create new Market</h3>
     {/* <button onClick={props.handleMarket(location)}></button> */}
     <form
-      method='post'
-      action=''
       onSubmit={(e) => {
         e.preventDefault();
-        const location = e.target.elements['location'].value;
+        const location = e.target.elements["location"].value;
         // console.log(e);
         props.handleMarket(location);
       }}

@@ -9,23 +9,28 @@
  * ************************************
  */
 
-import React from 'react';
-import { useSelector } from 'react-redux';
-import marketsReducer from '../reducers/marketsReducer';
+import React from "react";
+import { useSelector } from "react-redux";
+// import marketsReducer from "../reducers/marketsReducer";
 
-const TotalsDisplay = (props) => (
-  // console.log(props.state.totalCards)
-  // const marketList = useSelector(state => state.markets.marketList)
-  // const totalCards = useSelector((state) => state.markets.totalCards);
+const TotalsDisplay = (props) => {
+  // console.log("props", props.state);
 
-  <div className="innerbox" id="totals">
-    <label htmlFor="totalCards">Total Cards:</label>
-    <span id="totalCards">{props.cards}</span>
-    <p>
-      <label htmlFor="totalMarkets">Total Markets:</label>
-      <span id="totalMarkets">{props.totalMarkets}</span>
-    </p>
-  </div>
-);
+  const totalMarkets = useSelector((state) => state.markets.totalMarkets);
+  const totalCards = useSelector((state) => state.markets.totalCards);
+
+  // console.log(`state`, totalCards);
+
+  return (
+    <div className='innerbox' id='totals'>
+      <label htmlFor='totalCards'>Total Cards: </label>
+      <span id='totalCards'>{totalCards}</span>
+      <p>
+        <label htmlFor='totalMarkets'>Total Markets: </label>
+        <span id='totalMarkets'>{totalMarkets}</span>
+      </p>
+    </div>
+  );
+};
 
 export default TotalsDisplay;
